@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import type {RecordType, AccountRecord} from "@/types";
 
 type FormProps = {
@@ -10,7 +10,7 @@ export default function Form({ onAdd }: FormProps) {
     const [amount, setAmount] = useState("");
     const [description, setDescription] = useState("");
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         const value = Number(amount);
         if (!value || value <=0 || !description.trim()) {

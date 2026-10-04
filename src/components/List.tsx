@@ -1,4 +1,5 @@
 import type { AccountRecord } from "@/types";
+import { formatMoney } from "@/utils/formatMoney";
 
 type ListProps = {
     records: AccountRecord[];
@@ -15,7 +16,7 @@ export default function List({ records, onDelete }: ListProps) {
             {records.map((r) => (
                 <li key={r.id} className="record-item">
                     <span className={`amount ${r.type}`}>
-                        {r.type === "income" ? r.amount : -r.amount}
+                        {formatMoney(r.type === "income" ? r.amount : -r.amount, r.currency)}
                     </span>
                     <span className="description">{r.description}</span>
                     <button onClick={() => onDelete(r.id)}>刪除</button>

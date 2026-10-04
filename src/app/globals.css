@@ -41,18 +41,27 @@ body {
 }
 
 .btn, button {
-    display: inline-block; padding: 6px 10px; font-size: 14px;
-    border: 1px solid #ccc; background: #eee; color: #333;
-    text-decoration: none; cursor: pointer;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: #eee; color: #333;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .record-form {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
-    padding: 36px 16px 20px; border-bottom: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 36px 16px 20px;
+    border-bottom: 1px solid #eee;
 }
 
 .record-form select, .record-form input {
-    padding: 6px 8px; font-size: 16px;
+    padding: 6px 8px;
+    font-size: 16px;
     border: 1px solid #999;
     border-radius: 3px;
 }
@@ -80,7 +89,7 @@ body {
 }
 
 .amount {
-    width: 72px;
+    width: 120px;
 }
 .income {
     color: green;
@@ -98,9 +107,20 @@ body {
     font-size: 18px;
 }
 
-.empty { text-align: center;
+.empty {
+    text-align:center;
     margin-top: 24px;
     color: #999;
+}
+
+.rate {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+}
+.rate a {
+    color: inherit;
 }
 
 button, input, select {

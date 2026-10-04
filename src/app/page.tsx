@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+interface RateResponse {
+  result: "success" | "error";
+  time_last_update_utc: string;
+  rates: Record<string, number>;
+}
+
 export default function Home() {
   return (
     <main className="container">
